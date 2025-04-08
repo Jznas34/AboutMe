@@ -4,13 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
 </head>
 <body>
+    <body class="page"></body>
     <nav>
         <ul id="nav">
-            <li><a href="index.html">About Me</a></li>
-            <li><a href="hobbys.html">My hobbies</a></li>
-            <li><a href="competence.html">Competence</a></li>
+            <li><a href="index.html"class="nav-link">About Me</a></li>
+            <li><a href="hobbys.html"class="nav-link">My hobbies</a></li>
+            <li><a href="competence.htmlclass="nav-link"">Competence</a></li>
         </ul>
     </nav>
     <h1>goals.</h1>
@@ -34,5 +36,27 @@
             <img src="assets/mail.png" alt="Mailto" id="mail-pic">
         </a>
     </div>
+    <script>
+        // Füge die fade-in-Klasse beim Laden der Seite hinzu
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('fade-in');
+        });
+    
+        // Füge die fade-out-Klasse beim Klicken auf einen Link hinzu
+        const links = document.querySelectorAll('.nav-link');
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetPage = this.getAttribute('href');
+    
+                document.body.classList.remove('fade-in'); // Entferne fade-in
+                document.body.classList.add('fade-out'); // Füge fade-out hinzu
+    
+                setTimeout(() => {
+                    window.location.href = targetPage;
+                }, 500); // Dauer der Animation
+            });
+        });
+    </script>
 </body>
 </html>

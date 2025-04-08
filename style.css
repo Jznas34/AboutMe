@@ -13,6 +13,8 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 #text {
@@ -122,22 +124,51 @@ h1 {
 }
 
 #basf-pic {
-    width: 155px;
-    height: 103px;
-    display: block;
-    margin: 0 auto;
-    position: absolute;
-    top: 1px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 10%; 
+    max-width: 155px; 
+    height: auto; 
+    position: absolute; 
+    top: -40;
+    left: 50%; 
+    transform: translateX(-50%); 
 }
 
 #mail-pic {
-    width: 34px;
-    height: 40px;
-    position: absolute;
-    top: 20px;
+    width: 5%; 
+    max-width: 34px; 
+    height: auto; 
+    position: absolute; 
+    top: 0; 
     right: 50px; 
 }
 
 /*Animationen einbauen!!*/
+body {
+    overflow: hidden; /* Prevent scrolling during transitions */
+}
+
+.page {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+}
