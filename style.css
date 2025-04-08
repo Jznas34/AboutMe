@@ -1,0 +1,143 @@
+/*Index*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 40px;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+#text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1 {
+    color: #000000;
+    font-size: 64px; 
+    font-family: 'Kronkhmer Sleokchher', sans-serif;
+    left: 166px;
+    top: 260px;
+    width: 358px;
+    height: 42px;
+    margin: 0 0 20px 0;
+}
+
+#subheader {
+    color: #615E5E;
+    font-size: 36px;
+    font-family: 'Kronkhmer Sleokchher', sans-serif;
+    left: 166px;
+    width: 934px;
+    margin: 0 0 60px 0;
+}
+
+#introduction {
+    color: #787878;
+    font-size: 26px;
+    font-family: 'Kronkhmer Sleokchher', sans-serif;
+    left: 166px;
+    width: 934px;
+    margin: 0 0 60px 0;
+}
+
+#quote {
+    color: #000000;
+    font-size: 32px;
+    font-family: 'Kronkhmer Sleokchher', sans-serif;
+    left: 227px;
+    width: 918px;
+    margin: 0 0 10px 0;
+}
+
+#profile-pic {
+    width: 442px;
+    height: 589px;
+    position: static;
+    margin-left: 120px;
+}
+
+#nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 60px 0;
+    gap: 85px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    font-family: 'Kronkhmer Sleokchher', sans-serif;
+    padding: 5px 10px;
+}
+
+#nav a:hover {
+    color: rgb(45, 214, 22);
+    text-decoration:wavy;
+
+}
+
+/*Hobbys*/
+#gala-pic {
+    width: 401px;
+    height: 534px;
+    margin-left: 100px;
+}
+
+/*Competence*/
+#vaultboy-pic {
+    width: 347px;
+    height: 618px;
+    margin-left: 180px;
+}
+
+/*Goals*/
+#images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#f40-pic {
+    width: 471px;
+    height: 314px;
+    margin-left: 100px;
+}
+
+#hellcat-pic {
+    width: 471px;
+    height: 340px;
+    margin-left: 100px;
+}
+
+#basf-pic {
+    width: 155px;
+    height: 103px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#mail-pic {
+    width: 34px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 50px; 
+}
+
+/*Animationen einbauen!!*/
