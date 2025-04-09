@@ -32,3 +32,19 @@
 .fade-out {
     animation-name: fadeOut;
 }
+
+/* Keyframes für den Burst-Effekt */
+@keyframes burst {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(2); /* Kleinere Skalierung */
+        opacity: 0.8; /* Sichtbarkeit */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(3); /* Endgröße angepasst */
+        opacity: 0;
+    }
+}

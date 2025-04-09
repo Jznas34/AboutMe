@@ -27,11 +27,11 @@ h1 {
     color: #000000;
     font-size: 64px; 
     font-family: 'Kronkhmer Sleokchher', sans-serif;
-    left: 166px;
-    top: 260px;
-    width: 358px;
-    height: 42px;
-    margin: 0 0 20px 0;
+    position: relative; /* Verhindert absolute Positionierung */
+    margin: 0 0 10px 0; /* Entfernt den linken Abstand */
+    padding-left: 0px; /* Gleicher linker Abstand wie der #subheader */
+    width: auto; /* Entfernt feste Breite */
+    height: auto; /* Entfernt feste Höhe */
 }
 
 #subheader {
@@ -70,10 +70,13 @@ h1 {
 
 #nav {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     list-style: none;
     padding: 0;
     margin: 0 0 60px 0;
     gap: 85px;
+    width: 100%;	
 }
 
 #nav a {
@@ -126,9 +129,9 @@ h1 {
 #basf-pic {
     width: 10%; 
     max-width: 155px; 
-    height: auto; 
-    position: absolute; 
-    top: -40;
+    height: auto;
+    position: absolute;
+    top: -40px;
     left: 50%; 
     transform: translateX(-50%); 
 }
@@ -171,4 +174,32 @@ body {
 .page-exit-active {
     opacity: 0;
     transform: translateY(-20px);
+}
+/* Explosive Letter Burst on Hover */
+h1 {
+    position: relative;
+    display: inline-block;
+    overflow: visible; /* Wichtig: Damit der Effekt sichtbar bleibt */
+    cursor: pointer;
+}
+
+h1::before,
+h1::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px; /* Kleinere Breite */
+    height: 50px; /* Kleinere Höhe */
+    background: radial-gradient(ellipse, rgba(173, 216, 230, 0.8), rgba(147, 112, 219, 0.6), rgba(255, 255, 255, 0.3), transparent);
+    border-radius: 50%; /* Ellipsenform durch unterschiedliche Breite und Höhe */
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1; /* Effekt bleibt hinter dem Text */
+}
+
+h1:hover::before,
+h1:hover::after {
+    animation: burst 0.8s ease-out forwards; /* Dauer leicht erhöht */
 }
